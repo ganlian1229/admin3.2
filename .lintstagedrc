@@ -1,0 +1,6 @@
+{
+    "**/*.{js,jsx,vue,scss,css}": [
+        "prettier --write \"src/**/*.js\" \"src/**/*.vue\"",
+        "vue-cli-service lint --fix"
+    ]
+}
