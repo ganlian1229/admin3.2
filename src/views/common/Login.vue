@@ -35,12 +35,10 @@
 
 <script setup>
 import { resetRouter } from '@/router/index';
-import { ref, reactive } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import mainStore from '@/store/mainStore';
+import storeObj from '@/store';
 const route = useRoute();
 const router = useRouter();
-let store = mainStore();
+let { setUserInfo } = storeToRefs(storeObj.mainStore);
 let ruleForm = reactive({
     username: 'admin',
     password: '123456'
@@ -78,7 +76,7 @@ function submitForm(formDom) {
             let userInfo = {
                 userId: 1
             };
-            store.setUserInfo(userInfo);
+            setUserInfo(userInfo);
         } else {
             console.log('error submit!!');
             return false;
@@ -111,7 +109,7 @@ function addDynamicRoutes() {
         padding: 20px;
         z-index: 9999;
         background: #f0f2f5;
-        :deep .el-form-item__content {
+        :deep(.el-form-item__content) {
             margin-left: 0 !important;
         }
     }

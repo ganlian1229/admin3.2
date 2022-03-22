@@ -46,8 +46,6 @@
 <script setup>
 import routerArr from '@/router/routes';
 import { deepCopy } from '@/common/common';
-import { onBeforeMount, ref, defineEmits, defineProps } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
 const route = useRoute();
 const router = useRouter();
 const emit = defineEmits(['update:isActive']);
@@ -115,13 +113,13 @@ function showMenu(arr) {
         width: 100%;
     }
 
-    :deep .el-scrollbar {
+    :deep(.el-scrollbar) {
         height: 100%;
         .scrollbar-wrapper {
             overflow-x: hidden;
         }
     }
-    :deep .el-menu {
+    :deep(.el-menu) {
         border: none;
         height: 100%;
         width: 100% !important;

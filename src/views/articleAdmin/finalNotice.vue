@@ -20,7 +20,6 @@
     </div>
 </template>
 <script setup>
-import { reactive } from 'vue';
 let formData = reactive({
     userName: '',
     password: '',

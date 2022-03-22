@@ -17,8 +17,6 @@
     </div>
 </template>
 <script setup>
-import mouseSelect from '@/components/mouseSelect';
-import { reactive, ref, onMounted, onBeforeUnmount } from 'vue';
 let fileList = ref([
     {
         isAct: false,

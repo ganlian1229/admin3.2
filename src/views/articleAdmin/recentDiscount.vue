@@ -6,7 +6,6 @@
 </template>
 <script setup>
 import test from './components/test.vue';
-import { onBeforeMount, onMounted } from 'vue';
 onBeforeMount(() => {
     console.log('beforeMount');
 });

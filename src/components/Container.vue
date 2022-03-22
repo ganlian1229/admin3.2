@@ -16,9 +16,6 @@
     </el-container>
 </template>
 <script setup>
-import topNavBar from '@/components/container/topNavBar';
-import leftSidebar from '@/components/container/leftSidebar';
-import { onMounted, ref, defineEmits, defineProps } from 'vue';
 //需要缓存的路由  值是组件的name
 let keepAliveArr = ref(['advertising']);
 //是否收起菜单 true 收起

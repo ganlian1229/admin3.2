@@ -27,11 +27,8 @@
     </div>
 </template>
 <script setup>
-import { onMounted, ref } from 'vue';
-import mainStore from '@/store/mainStore';
-import { storeToRefs } from 'pinia';
-let store = mainStore();
-let { userInfo } = storeToRefs(store);
+import storeObj from '@/store';
+let { userInfo } = storeToRefs(storeObj.mainStore);
 
 let number = ref('');
 let dataList = ref([]);

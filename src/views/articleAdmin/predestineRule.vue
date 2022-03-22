@@ -15,7 +15,6 @@
     </div>
 </template>
 <script setup>
-import { nextTick, onMounted, ref } from 'vue';
 //数据
 let dataList = ref([]);
 //scroll高度

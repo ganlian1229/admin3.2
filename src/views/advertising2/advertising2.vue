@@ -35,7 +35,6 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
 //时间快捷选择
 let shortcuts = [
     {
@@ -67,7 +66,7 @@ let shortcuts = [
     }
 ];
 //时间筛选
-let filterTime = ref('');
+let filterTime = ref([]);
 
 //筛选方法
 function filterFun() {
@@ -75,7 +74,7 @@ function filterFun() {
 }
 //获取数据列表
 function getDataList() {
-    console.log(filterTime);
+    console.log(filterTime.value[0], filterTime.value[1]);
 }
 </script>
 <style lang="scss">

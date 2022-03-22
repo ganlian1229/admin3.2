@@ -31,7 +31,10 @@
     "prettier": "^2.5.1",
     "prettier-eslint": "^13.0.0",
     "sass": "^1.27.0",
-    "sass-loader": "^10.0.4"
+    "sass-loader": "^10.0.4",
+    "unplugin-auto-import": "^0.6.6",
+    "unplugin-vue-components": "^0.18.3",
+    "vue-global-api": "^0.4.1"
   },
   "eslintConfig": {
     "root": true,

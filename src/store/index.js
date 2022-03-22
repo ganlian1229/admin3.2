@@ -1,8 +1,5 @@
-import { createPinia } from 'pinia';
-import piniaPluginPersist from 'pinia-plugin-persist';
+import mainStore from './mainStore';
 
-export default function setupStore(app) {
-    const pinia = createPinia();
-    pinia.use(piniaPluginPersist);
-    app.use(pinia);
-}
+export default {
+    mainStore: mainStore()
+};

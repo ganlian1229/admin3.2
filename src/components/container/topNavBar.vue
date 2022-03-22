@@ -13,8 +13,6 @@
     </div>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue';
-import { useRouter } from 'vue-router';
 import { ElMessageBox } from 'element-plus';
 const router = useRouter();
 const emits = defineEmits(['update:isActive']);
