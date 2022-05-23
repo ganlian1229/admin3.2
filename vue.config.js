@@ -1,6 +1,5 @@
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
-const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = {
     devServer: {
@@ -32,7 +31,6 @@ module.exports = {
                 dts: "src/auto-imports.d.ts"
             }),
             Components({
-                resolvers: [ElementPlusResolver()],//自动导入elementPlus组件
                 // 指定组件位置，默认是src/components
                 dirs: ['src/components', 'src/componentsGlobal'],//自动导入自定义组件
                 dts: "src/components.d.ts"

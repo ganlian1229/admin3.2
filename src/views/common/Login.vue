@@ -38,7 +38,7 @@ import { resetRouter } from '@/router/index';
 import storeObj from '@/store';
 const route = useRoute();
 const router = useRouter();
-let { setUserInfo } = storeToRefs(storeObj.mainStore);
+let { setUserInfo } = storeObj.mainStore;
 let ruleForm = reactive({
     username: 'admin',
     password: '123456'
@@ -65,7 +65,7 @@ let rules = reactive({
 
 let ruleFormDom = ref(null);
 //登录
-function submitForm(formDom) {
+const submitForm = (formDom = undefined) => {
     if (!formDom) return;
     formDom.validate((valid) => {
         if (valid) {
@@ -82,7 +82,7 @@ function submitForm(formDom) {
             return false;
         }
     });
-}
+};
 //登录成功后添加动态路由
 function addDynamicRoutes() {
     //重置路由

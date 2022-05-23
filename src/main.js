@@ -11,6 +11,8 @@ import * as ElIcons from '@element-plus/icons-vue';
 for (const name in ElIcons) {
     app.component(name, ElIcons[name]);
 }
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
 
 //使用pinia
 import setupStore from '@/store/useStore.js';
@@ -20,4 +22,4 @@ setupStore(app);
 import setupDirective from '@/directive';
 setupDirective(app);
 
-app.mount('#app');
+app.use(ElementPlus).mount('#app');
