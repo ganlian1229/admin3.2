@@ -13,6 +13,7 @@ for (const name in ElIcons) {
 }
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
+// import 'element-plus/theme-chalk/dark/css-vars.css';
 
 //使用pinia
 import setupStore from '@/store/useStore.js';

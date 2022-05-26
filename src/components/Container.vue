@@ -21,19 +21,7 @@ let keepAliveArr = ref(['advertising']);
 //是否收起菜单 true 收起
 let isActive = ref(false);
 
-function windowResize() {
-    let clientWidth = document.body.clientWidth;
-    if (clientWidth <= 1450) {
-        isActive.value = true;
-    } else {
-        isActive.value = false;
-    }
-}
-
-onMounted(() => {
-    windowResize();
-    window.addEventListener('resize', windowResize, false);
-});
+onMounted(() => {});
 </script>
 
 <style lang="scss" scoped>
