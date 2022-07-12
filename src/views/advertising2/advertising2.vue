@@ -16,22 +16,6 @@
                 </el-date-picker>
             </div>
         </div>
-        <div class="filter-box filter-box2">
-            <div class="filter-item">
-                <el-date-picker
-                    v-model="filterTime"
-                    type="daterange"
-                    range-separator="至"
-                    start-placeholder="开始日期"
-                    end-placeholder="结束日期"
-                    value-format="YYYY-MM-DD"
-                    @change="filterFun"
-                    align="center"
-                    :shortcuts="shortcuts"
-                >
-                </el-date-picker>
-            </div>
-        </div>
     </div>
 </template>
 <script setup>
@@ -74,7 +58,7 @@ function filterFun() {
 }
 //获取数据列表
 function getDataList() {
-    console.log(filterTime.value[0], filterTime.value[1]);
+    console.log(filterTime);
 }
 </script>
 <style lang="scss">

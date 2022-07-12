@@ -18,7 +18,9 @@
                         v-if="item.meta.show && !item.meta.isOne"
                     >
                         <template #title>
-                            <el-icon><home-filled /></el-icon>
+                            <el-icon>
+                                <component :is="item.meta.icon"></component>
+                            </el-icon>
                             <span>{{ item.meta.title }}</span>
                         </template>
                         <el-menu-item
@@ -26,16 +28,20 @@
                             :key="ind"
                             :index="item.path + '/' + list.path"
                         >
-                            <el-icon><home-filled /></el-icon>
+                            <el-icon>
+                                <component :is="list.meta.icon"></component>
+                            </el-icon>
                             <template #title> {{ list.meta.title }}</template>
                         </el-menu-item>
                     </el-sub-menu>
                     <el-menu-item
-                        :index="item.path + '/' + item.meta.onePath"
+                        :index="item.path + '/' + item.children[0].path"
                         :key="item.name"
                         v-else
                     >
-                        <el-icon><home-filled /></el-icon>
+                        <el-icon>
+                            <component :is="item.meta.icon"></component>
+                        </el-icon>
                         <template #title> {{ item.meta.title }}</template>
                     </el-menu-item>
                 </template>
