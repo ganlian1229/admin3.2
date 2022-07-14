@@ -32,7 +32,7 @@ module.exports = {
             }),
             Components({
                 // 指定组件位置，默认是src/components
-                dirs: ['src/components', 'src/componentsGlobal'],//自动导入自定义组件
+                dirs: ['src/componentsGlobal'],//自动导入自定义组件
                 dts: "src/components.d.ts"
             })
         ],
