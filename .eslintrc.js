@@ -7,6 +7,7 @@ module.exports = {
         storeToRefs: true,
         useRoute: true,
         useRouter: true,
+        $ref: true,
     },
     extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier', 'vue-global-api'],
     parserOptions: {

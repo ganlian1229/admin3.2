@@ -1,7 +1,7 @@
 import Axios from 'axios';
-import router from '@/router/index';
-import { Loading, Message } from 'element-ui';
-// import store from "@/store/index.js"
+
+import { ElLoading, ElMessage } from 'element-plus';
+const router = useRouter();
 // 请求头
 // Axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8";//FROM
 Axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'; //JSON
@@ -28,7 +28,7 @@ let LoadingInstance = {
 function addLoading() {
     LoadingInstance.count++;
     if (LoadingInstance.count == 1) {
-        LoadingInstance.target = Loading.service({
+        LoadingInstance.target = ElLoading.service({
             lock: true,
             customClass: 'loading-box',
             text: 'Loading',
@@ -82,14 +82,14 @@ export function get(url, params = {}) {
                 //     resolve(res.data);
                 // } else if (res.data.code == 0) {
                 //     //code等于0的公共操作（这里是跳转到登录）
-                //     Message.error(res.data.msg);
+                //     ElMessage.error(res.data.msg);
                 //     router.replace({
                 //         name: "login"
                 //     })
                 //     sessionStorage.clear();
                 // } else {
                 //     reject(res.data);
-                //     Message.error(res.data.msg);
+                //     ElMessage.error(res.data.msg);
                 // }
             })
             .catch((err) => {
@@ -113,19 +113,19 @@ export function post(url, params = {}) {
                     resolve(res.data);
                 } else if (res.data.code == 40001) {
                     //code等于0的公共操作（这里是跳转到登录）
-                    Message.error(res.data.msg);
+                    ElMessage.error(res.data.msg);
                     router.replace({
                         name: 'login'
                     });
                     sessionStorage.clear();
                 } else {
                     reject(res.data);
-                    Message.error(res.data.msg);
+                    ElMessage.error(res.data.msg);
                 }
             })
             .catch((err) => {
                 closeLoading();
-                Message.error('出现错误，请联系管理员!');
+                ElMessage.error('出现错误，请联系管理员!');
                 reject(err.data);
             });
     });
@@ -147,19 +147,19 @@ export function multiPost(url, FormData) {
                     resolve(res.data);
                 } else if (res.data.code == 40001) {
                     //code等于0的公共操作（这里是跳转到登录）
-                    Message.error(res.data.msg);
+                    ElMessage.error(res.data.msg);
                     router.replace({
                         name: 'login'
                     });
                     sessionStorage.clear();
                 } else {
                     reject(res.data);
-                    Message.error(res.data.msg);
+                    ElMessage.error(res.data.msg);
                 }
             })
             .catch((err) => {
                 closeLoading();
-                Message.error('出现错误，请联系管理员!');
+                ElMessage.error('出现错误，请联系管理员!');
                 reject(err.data);
             });
     });
