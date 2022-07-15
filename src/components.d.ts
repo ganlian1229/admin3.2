@@ -4,12 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Container: typeof import('./components/Container.vue')['default']
     GlobalCom: typeof import('./componentsGlobal/globalCom.vue')['default']
-    LeftSidebar: typeof import('./components/container/leftSidebar.vue')['default']
-    MouseSelect: typeof import('./components/mouseSelect.vue')['default']
     TestGlobalCom: typeof import('./componentsGlobal/test/testGlobalCom.vue')['default']
-    TopNavBar: typeof import('./components/container/topNavBar.vue')['default']
   }
 }
 

@@ -65,9 +65,8 @@ let menus = ref([]);
 //需要展开的path
 let openedsArr = ref([]);
 
-onBeforeMount(() => {
+onMounted(() => {
     showMenu(deepCopy(routerArr));
-    console.log(props);
 });
 
 //显示左侧导航
